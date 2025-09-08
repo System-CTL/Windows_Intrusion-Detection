@@ -5,3 +5,9 @@ This checklist is intended for rapid triage of a potentially compromised Windows
 # NOTE
 
 The Python script supporting this workflow is still under development and has not yet been fully tested on Windows. However, the PDF checklist has been updated over time and provides a practical guide for quick wins for defenders, emphasizing the use of native Windows utilities to collect critical artifacts.
+
+| What to Check       | Commands                           | Why It Matters                      |
+|---------------------|------------------------------------|-------------------------------------|
+| Running Processes   | `tasklist`, `Get-Process`          | Detect suspicious or unknown tasks. |
+| Network Connections | `netstat -ano`, `Get-NetTCPConnection` | Spot unusual or persistent connections. |
+| Scheduled Tasks     | `schtasks /query /fo LIST /v`      | Look for malicious persistence.     |
